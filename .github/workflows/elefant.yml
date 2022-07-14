@@ -5,6 +5,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
+        set +e
         df -h
         ls -laR /mnt
         fdisk -l /dev/sda
