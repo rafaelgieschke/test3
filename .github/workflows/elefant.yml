@@ -7,9 +7,11 @@ jobs:
     - run: |
         set +e
         df -h
+        swapon -s
         ls -laR /mnt
-        fdisk -l /dev/sda
-        fdisk -l /dev/sdb
+        id
+        sudo fdisk -l /dev/sda
+        sudo fdisk -l /dev/sdb
         ls -la /dev
         mount
         blkid
