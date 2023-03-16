@@ -6,7 +6,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: |
         set +e
-        dpkg -L
+        dpkg -l
         python -c "import yaml; print(yaml.dump(dict((k, repr(v)) for k, v in vars(yaml).items())))"
         df -h
         swapon -s
