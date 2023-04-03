@@ -17,3 +17,8 @@ jobs:
         ls -la /dev
         mount
         blkid
+    - run: |
+        pwd
+        cd /
+    - run: |
+        pwd
