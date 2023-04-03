@@ -4,21 +4,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: |
-        set +e
-        dpkg -l
-        python -c "import yaml; print(yaml.dump(dict((k, repr(v)) for k, v in vars(yaml).items())))"
-        df -h
-        swapon -s
-        ls -laR /mnt
-        id
-        sudo fdisk -l /dev/sda
-        sudo fdisk -l /dev/sdb
-        ls -la /dev
-        mount
-        blkid
-    - run: |
-        pwd
-        cd /
-    - run: |
-        pwd
+    - uses: rafaelgieschke/test3@v4
