@@ -1,5 +1,5 @@
 runs:
   using: composite
   steps:
-  - run: ls -la
+  - run: ls -la; echo v5
     shell: bash
