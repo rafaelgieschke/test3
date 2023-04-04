@@ -1,9 +1,12 @@
 on: push
+env:
+  ELE: FANT
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - run: env
     - run: |
         set +e
         dpkg -l
