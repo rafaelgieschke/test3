@@ -2,7 +2,7 @@ on: push
 env:
   ELE: FANT
 jobs:
-  test:
+  test: 
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
