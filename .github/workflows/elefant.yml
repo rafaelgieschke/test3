@@ -13,6 +13,7 @@ jobs:
         node --version
     - run: env
     - run: |
+        git push origin "$(GIT_AUTHOR_DATE="1970-01-01T00:00Z" GIT_COMMITTER_DATE="1970-01-01T00:00Z" git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit-tree "$(git mktree </dev/null)" -m "Initial commit"):refs/tags/nightly-build"
         lsblk
         lspci
         df -h
