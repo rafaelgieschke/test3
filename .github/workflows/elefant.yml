@@ -16,7 +16,8 @@ jobs:
         lsblk
         lspci
         df -h
-        find /mnt
+        find /mnt || :
+        id
         set +e
         dpkg -l
         python -c "import yaml; print(yaml.dump(dict((k, repr(v)) for k, v in vars(yaml).items())))"
