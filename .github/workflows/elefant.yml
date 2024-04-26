@@ -15,10 +15,10 @@ jobs:
     - run: |
         tag=nightly
   
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        GIT_AUTHOR_DATE="1970-01-01T00:00Z" GIT_COMMITTER_DATE="1970-01-01T00:00Z" \
-        git push origin "$(git commit-tree "$(git mktree </dev/null)" </dev/null):refs/tags/$tag" || :
+        # git config user.name "github-actions[bot]"
+        # git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        # export GIT_AUTHOR_DATE="1970-01-01T00:00Z" GIT_COMMITTER_DATE="1970-01-01T00:00Z"
+        # git push origin "$(git commit-tree "$(git mktree </dev/null)" </dev/null):refs/tags/$tag" || :
 
         push origin "$(GIT_AUTHOR_DATE="1970-01-01T00:00Z" GIT_COMMITTER_DATE="1970-01-01T00:00Z" \
           git -c user.name="github-actions[bot]" \
